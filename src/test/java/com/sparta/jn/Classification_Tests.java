@@ -6,17 +6,24 @@ import org.junit.jupiter.api.Test;
 
 public class Classification_Tests {
     @Test
-    @DisplayName("Given that someone is **under 12** return U, PG and 12 films are available")
-    void givenAgeIsUnder12ReturnUPG12() {
-        Assertions.assertEquals("U, PG & 12 films are available."
+    @DisplayName("Given that someone is **under 12** return U, PG films are available")
+    void givenAgeIsUnder12ReturnUandPG() {
+        Assertions.assertEquals("U, PG films are available."
                 , FilmClassifications.availableClassifications(11));
     }
 
     @Test
-    @DisplayName("Given that someone is **under 15** return U, PG and 12 films are available")
-    void givenAgeIsUnder15ReturnUPG1215() {
-        Assertions.assertEquals("U, PG, 12 & 15 films are available.",
+    @DisplayName("Given that someone is **under 15** return U, PG, 12A and 12 films are available")
+    void givenAgeIsUnder15ReturnUPG1212A() {
+        Assertions.assertEquals("U, PG, 12 & 12A films are available.",
                 FilmClassifications.availableClassifications(14));
+    }
+
+    @Test
+    @DisplayName("Given that someone is **under 18** return U, PG, 12A, 12 and 15 films are available")
+    void givenAgeIsUnder18ReturnUPG1212A15() {
+        Assertions.assertEquals("U, PG, 12, 12A & 15 films are available.",
+                FilmClassifications.availableClassifications(17));
     }
 
     @Test
