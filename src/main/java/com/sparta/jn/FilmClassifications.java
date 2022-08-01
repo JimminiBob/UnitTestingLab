@@ -1,4 +1,4 @@
-package com.sparta.jn.UnitTestingLab;
+package com.sparta.jn;
 
 public class FilmClassifications {
 
