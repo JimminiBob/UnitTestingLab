@@ -15,8 +15,15 @@ public class Classification_Tests {
     @Test
     @DisplayName("Given that someone is **under 15** return U, PG and 12 films are available")
     void givenAgeIsUnder15ReturnUPG1215() {
-        Assertions.assertEquals("U, PG, 12 & 15 films are available."
-                , FilmClassifications.availableClassifications(14));
+        Assertions.assertEquals("U, PG, 12 & 15 films are available.",
+                FilmClassifications.availableClassifications(14));
+    }
+
+    @Test
+    @DisplayName("If someone is **over 18** return All films are available")
+    void givenAgeIsOver18ReturnAllFilms() {
+        Assertions.assertEquals("All films are available.",
+                FilmClassifications.availableClassifications(19));
     }
 
 }
