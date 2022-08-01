@@ -26,4 +26,6 @@ public class Classification_Tests {
                 FilmClassifications.availableClassifications(19));
     }
 
+    //All tests passed
+
 }
